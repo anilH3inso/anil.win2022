@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.93 scan initiated Wed May  8 16:27:11 2024 as: /usr/bin/nmap -T4 -sV -p T:0-20,24,26-79,81-109,112-134,136,138,140-442,444,446-1432,1434-2048,2050-3305,3307-3388,3390-5431,5433-8079,8081-29999 -oA /root/.local/share/legion/tmp/legion-d6sm5dtg-running/nmap/20240508162711022911-nmapstage5 192.168.56.50 -->
+<nmaprun scanner="nmap" args="/usr/bin/nmap -T4 -sV -p T:0-20,24,26-79,81-109,112-134,136,138,140-442,444,446-1432,1434-2048,2050-3305,3307-3388,3390-5431,5433-8079,8081-29999 -oA /root/.local/share/legion/tmp/legion-d6sm5dtg-running/nmap/20240508162711022911-nmapstage5 192.168.56.50" start="1715149631" startstr="Wed May  8 16:27:11 2024" version="7.93" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="29982" services="0-20,24,26-79,81-109,112-134,136,138,140-442,444,446-1432,1434-2048,2050-3305,3307-3388,3390-5431,5433-8079,8081-29999"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="192.168.56.50" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1715149632" endtime="1715149706"><status state="up" reason="reset" reason_ttl="255"/>
+<address addr="192.168.56.50" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="29978">
+<extrareasons reason="no-response" count="29978" proto="tcp" ports="0-6,8-12,14-18,20,24,26-79,81-109,112-134,136,138,140-442,444,446-1432,1434-2048,2050-3305,3307-3388,3390-5356,5358-5431,5433-8079,8081-29999"/>
+</extraports>
+<port protocol="tcp" portid="7"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="echo" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="13"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="daytime" product="Microsoft Windows USA daytime" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="19"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="chargen" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="5357"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<times srtt="28773" rttvar="35124" to="169269"/>
+</host>
+<runstats><finished time="1715149706" timestr="Wed May  8 16:28:26 2024" summary="Nmap done at Wed May  8 16:28:26 2024; 1 IP address (1 host up) scanned in 74.98 seconds" elapsed="74.98" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

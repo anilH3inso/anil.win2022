@@ -1,0 +1,22 @@
+# Nmap 7.93 scan initiated Wed May  8 16:24:18 2024 as: /usr/bin/nmap -sV --script=vulners -vvvv -oA /root/.local/share/legion/tmp/legion-d6sm5dtg-running/nmap/20240508162417956518-nmapstage3 192.168.56.50
+Nmap scan report for 192.168.56.50
+Host is up, received reset ttl 255 (0.0024s latency).
+Scanned at 2024-05-08 16:24:18 AEST for 162s
+Not shown: 990 filtered tcp ports (no-response)
+PORT     STATE SERVICE       REASON         VERSION
+7/tcp    open  echo          syn-ack ttl 64
+9/tcp    open  discard?      syn-ack ttl 64
+13/tcp   open  daytime       syn-ack ttl 64 Microsoft Windows USA daytime
+17/tcp   open  qotd          syn-ack ttl 64 Windows qotd (English)
+19/tcp   open  chargen       syn-ack ttl 64
+135/tcp  open  msrpc         syn-ack ttl 64 Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack ttl 64 Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds? syn-ack ttl 64
+3389/tcp open  ms-wbt-server syn-ack ttl 64 Microsoft Terminal Services
+5357/tcp open  http          syn-ack ttl 64 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed May  8 16:27:00 2024 -- 1 IP address (1 host up) scanned in 162.84 seconds

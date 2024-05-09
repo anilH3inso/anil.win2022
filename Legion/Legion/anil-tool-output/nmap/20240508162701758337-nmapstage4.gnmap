@@ -1,0 +1,4 @@
+# Nmap 7.93 scan initiated Wed May  8 16:27:02 2024 as: /usr/bin/nmap -T4 -sV -p T:23,21,22,110,111,2049,3389,8080,U:500,5060 -oA /root/.local/share/legion/tmp/legion-d6sm5dtg-running/nmap/20240508162701758337-nmapstage4 192.168.56.50
+Host: 192.168.56.50 ()	Status: Up
+Host: 192.168.56.50 ()	Ports: 21/filtered/tcp//ftp///, 22/filtered/tcp//ssh///, 23/filtered/tcp//telnet///, 110/filtered/tcp//pop3///, 111/filtered/tcp//rpcbind///, 2049/filtered/tcp//nfs///, 3389/open/tcp//ms-wbt-server//Microsoft Terminal Services/, 8080/filtered/tcp//http-proxy///
+# Nmap done at Wed May  8 16:27:10 2024 -- 1 IP address (1 host up) scanned in 7.69 seconds

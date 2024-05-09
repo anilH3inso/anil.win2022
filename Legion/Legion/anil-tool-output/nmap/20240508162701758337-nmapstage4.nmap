@@ -1,0 +1,18 @@
+WARNING: Your ports include "U:" but you haven't specified UDP scan with -sU.
+# Nmap 7.93 scan initiated Wed May  8 16:27:02 2024 as: /usr/bin/nmap -T4 -sV -p T:23,21,22,110,111,2049,3389,8080,U:500,5060 -oA /root/.local/share/legion/tmp/legion-d6sm5dtg-running/nmap/20240508162701758337-nmapstage4 192.168.56.50
+Nmap scan report for 192.168.56.50
+Host is up (0.00075s latency).
+
+PORT     STATE    SERVICE       VERSION
+21/tcp   filtered ftp
+22/tcp   filtered ssh
+23/tcp   filtered telnet
+110/tcp  filtered pop3
+111/tcp  filtered rpcbind
+2049/tcp filtered nfs
+3389/tcp open     ms-wbt-server Microsoft Terminal Services
+8080/tcp filtered http-proxy
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed May  8 16:27:10 2024 -- 1 IP address (1 host up) scanned in 7.69 seconds
